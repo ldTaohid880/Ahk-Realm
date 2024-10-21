@@ -41,27 +41,18 @@ ActiveWindowChanged(hWnd, *) {
         activeWinClass := WinGetClass(hWnd)
         activeWinExe := WinGetProcessName(hWnd)
 
-        ; OutputDebug("New active window : " WinGetProcessName(hWnd))
-
         if (RegExMatch(activeWinClass, exceptionClass) || RegExMatch(activeWinExe, exceptionEXE)) {
-
-            ; OutputDebug("exceptional window : " WinGetProcessName(hWnd))
 
             return
         }
 
-        ; OutputDebug('active windows class => ' WinGetClass(hWnd))
         windowPosition := GetMonitorIndexFromWindow(hWnd)
 
         ; Check current position in both monitor lists
         indexInMonitor1 := HasVal(monitor1WindowList, hWnd)
         indexInMonitor2 := HasVal(monitor2WindowList, hWnd)
 
-        ; OutputDebug('win activated in monitor => ' windowPosition ' => ' activeWinExe ' => ' activeWinClass)
-
         if (windowPosition = 1) {
-
-            ; OutputDebug(WinGetProcessName(hWnd) " is in monitor 1")
 
             if (indexInMonitor1 = 0 && indexInMonitor2 > 0) {
                 ; Move from Monitor 2 to Monitor 1
@@ -78,8 +69,6 @@ ActiveWindowChanged(hWnd, *) {
 
         if (windowPosition = 2) {
 
-            ; OutputDebug(WinGetProcessName(hWnd) " is in monitor 2")
-
             if (indexInMonitor1 > 0 && indexInMonitor2 = 0) {
                 ; Move from Monitor 1 to Monitor 2
                 monitor1WindowList.RemoveAt(indexInMonitor1)  ; Remove from Monitor 1
@@ -93,8 +82,7 @@ ActiveWindowChanged(hWnd, *) {
             monitor2WindowList.InsertAt(1, hWnd)
         }
     }catch (Error as err) {
-        
-        MsgBox(err)
+        OutputDebug(err)
     }
 }
 

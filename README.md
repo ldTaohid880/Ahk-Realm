@@ -1,7 +1,7 @@
 
-# AHK Scripts and Bundled Apps
+# AHK Scripts
 
-Welcome to the **AHK Scripts and Bundled Apps** repository! This project contains a collection of useful **AutoHotkey (AHK) scripts** and bundled **Windows apps** designed to automate and simplify your daily tasks.
+Welcome to the **AHK Scripts** repository! This project contains a collection of useful **AutoHotkey (AHK) scripts** designed to automate and simplify your daily tasks.
 
 ## 📜 Project Overview
 
@@ -15,7 +15,6 @@ This repository is a one-stop hub for:
 
 ```bash
 ├── scripts/           # Folder containing all AHK scripts
-├── apps/              # Folder for bundled apps with built-in AHK scripts
 ├── README.md          # Project documentation
 └── LICENSE            # Licensing information
 ```
@@ -26,7 +25,7 @@ You will find a variety of scripts here, including but not limited to:
 
 - **Window Swapping (F1)**: A simple script that lets you quickly swap between windows using the `F1` key. Useful for multitasking and managing multiple open windows.
   
-### 🖥️ Upcoming Features
+### 🖥️ Upcoming Scripts
 
 Here's what you can expect in future updates:
 
@@ -35,6 +34,8 @@ Here's what you can expect in future updates:
 
 ## 🚀 How to Use
 
+### For AHK Scripts
+
 1. **Download AutoHotkey** from [AutoHotkey's official website](https://www.autohotkey.com/).
 2. Clone this repository:
 
@@ -42,16 +43,24 @@ Here's what you can expect in future updates:
    git clone https://github.com/ldTaohid880/Ahk-Realm.git
    ```
 
-3. Navigate to the `scripts/` or `apps/` folder to find the script or app you need.
-4. Run any `.ahk` script by double-clicking it or running it via the command line:
+3. Navigate to the `scripts/` folder to find the `.ahk` script you need.
+4. Run any `.ahk` script by double-clicking it, or by running it from the command line:
 
     ```bash
-   autohotkey path/to/script.ahk
-   ```
+    autohotkey path/to/script.ahk
+    ```
+
+### For Compiled Scripts/Apps
+
+1. Navigate to the **Releases** section of this repository to download compiled scripts/apps.
+2. Download the `.exe` file of the desired app (e.g., **Window Swapping (F1)**).
+3. Run the `.exe` file directly—no need to install AutoHotkey. Simply double-click to execute.
+
+   - **Window Swapping (F1)**: Press the `F1` key to swap between the two most recently used windows, based on the monitor where your cursor is located.
 
 ## 📖 Requirements
 
-- **AutoHotkey**: Make sure to have AutoHotkey installed on your system to execute these scripts.
+- **AutoHotkey**: Required only if you're running `.ahk` scripts. No need for it if you're using compiled `.exe` files.
 - **Windows OS**: The apps and scripts are designed for Windows platforms.
 
 ## 🤝 Contributing
